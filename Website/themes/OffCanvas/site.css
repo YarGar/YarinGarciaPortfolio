@@ -15,7 +15,7 @@ html, body {
 }
 
 body {
-    font: 1.8em/1.5 'Open Sans', sans-serif', Century Gothic', Verdana, Geneva, 'DejaVu Sans';
+    font: 1.8em/1.5 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     background: #a4d0c4; /* Old browsers */
     background: -moz-linear-gradient(top,  #a4d0c4 0%, #fefee7 30%); /* FF3.6+ */
@@ -55,18 +55,28 @@ a {
         .container > div > header a {
             font-size: 9em;
             color: #000;
+            
         }
 header[role=banner] {
     font-family: Amatic SC;
     line-height: 1;
+    text-shadow: -1px 3px 3px rgba(150, 150, 150, 0.66);
 
 }
+header[role=banner] a:hover {
+    color:#72c4b9;
+    text-decoration: none;
+}
+
 .subtitle {
     font-family: Open sans;
     font-weight: 700;
     font-size: 1.3em;
 }
 
+a {
+    color: #9A9C9F;
+}
 
 div[role=main] {
     margin-bottom: 2em;
@@ -274,7 +284,4 @@ footer {
 .jumbotron {
     background-color: #0F0F0D;
     color:#FEFEE7;
-}
-body {
-    font: 1.8em/1.5 'Open Sans', sans-serif', Century Gothic', Verdana, Geneva, 'DejaVu Sans';
 }
