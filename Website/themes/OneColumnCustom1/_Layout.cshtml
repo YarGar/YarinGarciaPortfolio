@@ -4,7 +4,9 @@
 }
 <!doctype html>
 <html lang="en-us">
-<head prefix="og: http://ogp.me/ns#">
+<head prefix="og: http://ogp.me/ns#" >
+    <link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 	<meta charset="utf-8" />
 	<title>@Page.Title</title>
 	<meta name="description" content="@Blog.Description" />
@@ -40,10 +42,12 @@
 <body itemscope itemtype="http://schema.org/Blog" class="@(User.Identity.IsAuthenticated ? "admin": null)">
 
 	<div class="container">
-		<header role="banner">
-			<span><a href="~/" itemprop="url">@Blog.Title</a></span><br />
-			<em>@Blog.Description</em>
-		</header>
+        <div class="mainBanner">
+		    <header class="col-md-offset-2" >
+                <span><a href="~/" itemprop="url">@Blog.Title</a></span><br />
+                <em>@Blog.Description</em>
+		    </header>
+        </div>
 
 		<div role="main" class="col-md-8 col-md-offset-2">
 			@RenderBody()

@@ -12,11 +12,16 @@
 
 html, body{
     height: 100%;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    font: 1.8em/1.5 'Century Gothic', Verdana, Geneva, 'DejaVu Sans', sans-serif;
+    font: 1.8em/1.5 'Noto Sans', Verdana, Geneva, sans-serif;
+    color: #342800;
     margin: 0;
+    background: white; 
+
 }
 
 img, video, iframe {
@@ -27,25 +32,18 @@ td img, video, iframe {
     max-width: none;
 }
 
-a {
-    color: #3277b3;
-}
-
 .container {
     min-height: 100%;
     padding-bottom: 35px;
+    /*Custom*/
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
     .container > header {
         border: none;
-        text-align: center;
-        margin: 0 0 3em 0;
     }
-
-        .container > header a {
-            font-size: 4em;
-            color: #000;
-        }
 
 
 div[role=main] {
@@ -53,15 +51,39 @@ div[role=main] {
     overflow: auto;
 }
 
-/*#region BannerStyle*/
-header[role=banner] {
-    background: #a4d0c4;
-    line-height:1;
-    overflow:visible;
+/*#region MainBanner*/
+
+.mainBanner {
+    background: #5E9CA0;
+    margin-bottom: 3em;
 }
 
+    .mainBanner > header {
+        line-height: 0.75;
+        padding: 1em 1em 1em 1em;
+    }
+
+        .mainBanner > header > span {
+            font-family: 'Courgette', sans-serif;
+            font-size: 4em;
+        }
+
+            .mainBanner > header > span > a {
+                color: white;
+            }
+
+                .mainBanner > header > span > a:hover {
+                    text-decoration: none;
+                    color: white;
+                    text-shadow: 5px 5px 5px #333;
+                }
 
 
+
+        .mainBanner > header > em {
+            color: #342800;
+            padding-left: 1.5em;
+        }
 /*#endregion */
 .pager {
     margin-top: 2em;
@@ -72,13 +94,17 @@ input[type], button, textarea {
 }
 
 /*#region Post */
+.post > .jumbotron {
+    background: #73AFB6;
+}
+
 
 .post header h1 {
     margin: 0 0 3px 0;
 }
 
 .post header a {
-    color: #000;
+    color: #342800;
 }
 
 .post header div {
