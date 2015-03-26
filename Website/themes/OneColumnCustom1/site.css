@@ -45,12 +45,6 @@ td img, video, iframe {
         border: none;
     }
 
-
-div[role=main] {
-    margin-bottom: 2em;
-    overflow: auto;
-}
-
 /*#region MainBanner*/
 
 .mainBanner {
@@ -65,7 +59,7 @@ div[role=main] {
 
         .mainBanner > header > span {
             font-family: 'Courgette', sans-serif;
-            font-size: 4em;
+            font-size: 3em;
         }
 
             .mainBanner > header > span > a {
@@ -75,16 +69,19 @@ div[role=main] {
                 .mainBanner > header > span > a:hover {
                     text-decoration: none;
                     color: white;
-                    text-shadow: 5px 5px 5px #333;
+                    text-shadow: 0px -2.5px 4px rgba(10, 10, 10, 1);
                 }
-
-
-
         .mainBanner > header > em {
             color: #342800;
             padding-left: 1.5em;
         }
 /*#endregion */
+
+div[role=main] {
+    margin-bottom: 2em;
+    overflow: auto;
+}
+
 .pager {
     margin-top: 2em;
 }
@@ -96,8 +93,9 @@ input[type], button, textarea {
 /*#region Post */
 .post > .jumbotron {
     background: #73AFB6;
+    padding-top: .75em;
+    padding-bottom: .75em;
 }
-
 
 .post header h1 {
     margin: 0 0 3px 0;

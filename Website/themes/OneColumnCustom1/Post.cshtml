@@ -23,16 +23,16 @@
     
     @* If you want to use excerpts rather than full content in list view then uncomment the below 
         and remove the other articleBody div *@
-    @*@if (Blog.CurrentPost == null)
+    @if (Blog.CurrentPost == null)
     {
         <div itemprop="articleBody">@Model.Excerpt</div>
     }
     else
     {
         <div itemprop="articleBody">@Html.Raw(Model.Content)</div>
-    }*@
+    }
     
-    <div itemprop="articleBody">@Html.Raw(Blog.IsEditing ? Model.Content : Model.GetHtmlContent())</div>
+    @*<div itemprop="articleBody">@Html.Raw(Blog.IsEditing ? Model.Content : Model.GetHtmlContent())</div>*@
 
     @if (Blog.CurrentPost != null)
     {
